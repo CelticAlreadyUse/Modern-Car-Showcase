@@ -6,7 +6,7 @@ const Hero = () => {
 
     }
   return (
-    <div className="Hero">
+    <div className="hero">
         <div className="flex-1 pt-36 padding-x">
             <h1 className="hero__title">
                 Temukan,Baca dan Sewa Mobil dengan Cepat!
@@ -24,8 +24,9 @@ const Hero = () => {
         </div>
         <div className="hero__image-container">
     <div className="hero__image">
-        <Image src='/hero.png' alt="hero" fill className="object-contain"></Image>
-        <div className="hero__image-overlay"></div>
+        <div className="hero__image-overlay">
+        <Image src='/hero.png' alt="hero" fill className="object-contain "></Image>
+        </div>
     </div>
         </div>
     </div>
