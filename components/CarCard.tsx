@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { CarProps } from '@/types'
 import { CarDetails, CustomButton } from '.'
 import { modal } from '@nextui-org/react'
-import { calculateCarRent } from '@/utils'
+import { GenerateCarImageUrl, calculateCarRent } from '@/utils'
 import { useState } from 'react'
 type CarsCardProps={
   car:CarProps
@@ -31,7 +31,7 @@ const CarCard = ({car}:CarsCardProps) => {
         </span>
       </p>
       <div className='relative w-full h-40 my-3 object-contain'>
-    <Image src='/hero.png'alt='car-model'  fill
+    <Image src={GenerateCarImageUrl(car)} alt='car-model'  fill
     priority className='object-contain'
     />
         </div>
