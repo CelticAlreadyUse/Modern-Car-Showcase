@@ -37,3 +37,16 @@ export type FilterProps ={
     limit:number
     model:string
 }
+export interface OptionProps{
+    title:string,
+    value:string
+}
+export type CustomFilterProps ={
+    title:string
+    options:OptionProps[]
+}
+
+export type ShowMoreProps = {
+    PageNumber:number
+    isNext:boolean
+}

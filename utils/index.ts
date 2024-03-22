@@ -8,8 +8,9 @@ export async function fetchCars({manufactur,year,model,fuel,limit}:FilterProps){
         'cars-by-api-ninjas.p.rapidapi.com'
     }
     const response  = await fetch(
-      `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufactur}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,{
-            headers:headers
+      `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufactur}&year=${year}&fuel_type=${fuel}&model=${model}&limit=${limit}`,{
+      method:'GET',     
+      headers:headers
         }
         )
         const results = await response.json()
@@ -56,4 +57,5 @@ export const GenerateCarImageUrl= (car:CarProps,angle?:string) =>{
   
     return newPathname;
   };
-  
+
+ 

@@ -1,9 +1,9 @@
 
-import { Hero,SearchBar,CustomFilters,CarCard } from "@/components";
-import { fetchCars } from "@/utils";
+import { Hero,SearchBar,CustomFilters,CarCard, CustomButton,ShowMore } from "@/components";
+import { fuels, yearsOfProduction } from "@/constants";
+import { fetchCars, updateSearchParams } from "@/utils";
 import Image from "next/image";
-
-export default async function Home({searchParams}) {
+export default async function Home({searchParams}:any) {
   const allCars = await fetchCars({
     manufactur:searchParams.manufactur||'',
     year:searchParams.year ||2022,
@@ -12,11 +12,12 @@ export default async function Home({searchParams}) {
     model:searchParams.model || '',
   })
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length<1 || !allCars
+
+  const isDataEmpty = !Array.isArray( allCars) ||  allCars.length<1 || !allCars
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="overflow-hidden">
     <Hero/>
     <div className="mt-12 padding-x padding-y max-width" id="discover">
     <div className="home__text-container">
@@ -26,15 +27,21 @@ export default async function Home({searchParams}) {
     <div className="home__filters">
       <SearchBar/>
       <div className="home__filter-container">
-        <CustomFilters filter='year' />
-        <CustomFilters filter='fuel' />
+        <CustomFilters title='fuel' options={  fuels} />
+        <CustomFilters title='year' options={ yearsOfProduction}/>
       </div>
     </div>
     {!isDataEmpty?(
       <section>
-        <div className="home__cars-wrapper">
+        <div className=" home__cars-wrapper">
           {allCars?.map((car)=><CarCard car={car}/>)}
         </div>
+           <ShowMore
+  PageNumber={(searchParams.limit || 10)/10}
+  isNext={(searchParams.limit|| 10)>allCars.length}
+    
+    />
+  
       </section>
     ): (
       <div className="home__error-container">
