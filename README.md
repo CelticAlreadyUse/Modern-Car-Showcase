@@ -1,6 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+I made this web as a way of learning to understand the folder structure and also the TS used in next js, along with relying on Next Server side and Client side optimally.
 
 First, run the development server:
 
