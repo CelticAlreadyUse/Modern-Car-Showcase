@@ -14,6 +14,9 @@ pnpm dev
 # or
 bun dev
 ```
+![image](https://github.com/CelticAlreadyUse/Modern-Car-Showcase/assets/118651473/f0794af7-2543-45b0-a929-b15f9bbfaa56)
+![image](https://github.com/CelticAlreadyUse/Modern-Car-Showcase/assets/118651473/4e31e0d3-1ae4-4bb5-b795-b9b9fbf3fbd6)
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
