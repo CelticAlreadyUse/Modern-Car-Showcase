@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 import { CarProps } from '@/types'
 import { CarDetails, CustomButton } from '.'
-import { modal } from '@nextui-org/react'
 import { GenerateCarImageUrl, calculateCarRent } from '@/utils'
 import { useState } from 'react'
 type CarsCardProps={
