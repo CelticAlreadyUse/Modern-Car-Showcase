@@ -12,7 +12,7 @@ const Hero = () => {
                 Temukan,Baca dan Sewa Mobil dengan Cepat!
             </h1>
             <p className="hero__subtitle">
-                Persingkat waktu rental mobil mu dengan sedikit proses pemesanan
+                Persingkat waktu rental mobil mu tanpa ribet.
             </p>
             <CustomButton
             title="Lebih banyak"
