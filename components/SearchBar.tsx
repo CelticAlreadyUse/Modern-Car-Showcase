@@ -49,7 +49,7 @@ const handleSearch = (e:React.FormEvent<HTMLFormElement>) =>{
         //Membuat PathName Baru
         const newPathName = `${window.location.pathname}?${searchparams.toString()}`
         // Mengarahkan user ke pathname baru dari pathname sebagai tujuan searching car
-        router.push(newPathName)
+        router.push(newPathName,{scroll:false})
     }
     return (
     <form className='searchbar'  
