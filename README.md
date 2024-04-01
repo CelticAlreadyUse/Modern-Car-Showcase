@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 I made this web as a way of learning to understand the folder structure and also the TS used in next js, along with relying on Next Server side and Client side optimally.
-
+https://modern-car-showcase.vercel.app/
 First, run the development server:
 
 ```bash
